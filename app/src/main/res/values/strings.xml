@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Network Measurement</string>
+
+    <string name="startup_label_retry">Retry</string>
 </resources>

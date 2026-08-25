@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.navigation.compose.rememberNavController
+import com.daisy.networkmeasurement.ui.navigation.AppNavHost
 import com.daisy.networkmeasurement.ui.theme.NetworkMeasurementTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +14,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NetworkMeasurementTheme {
+                val navController = rememberNavController()
 
+                AppNavHost(
+                    navController = navController
+                )
             }
         }
     }
