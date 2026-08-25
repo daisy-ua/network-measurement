@@ -17,10 +17,6 @@
 # Local configuration files
 *.properties
 
-# Configurations files
-#(only for open-source projects)
-*.json
-
 # Keystores
 *.jks
 *.keystore
