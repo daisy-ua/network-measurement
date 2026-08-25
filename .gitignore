@@ -1,0 +1,37 @@
+# Android Studio \ IDE files
+.idea/
+*.iml
+
+#Include IDE copyright and code style
+!.idea/copyright
+!/.idea/codeStyles
+
+# Gradle files
+#(for multi-module projects)
+**/build/
+.gradle/
+
+# Log/Crash files
+*.log
+
+# Local configuration files
+*.properties
+
+# Configurations files
+#(only for open-source projects)
+*.json
+
+# Keystores
+*.jks
+*.keystore
+
+#Screenshots
+captures/
+
+#NDK generated files
+obj/
+.cxx/
+.externalNativeBuild
+
+# Mac OS files
+.DS_Store
