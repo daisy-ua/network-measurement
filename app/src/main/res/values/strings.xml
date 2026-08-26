@@ -2,4 +2,9 @@
     <string name="app_name">Network Measurement</string>
 
     <string name="startup_label_retry">Retry</string>
+
+    <string name="main_label_test">Test</string>
+    <string name="main_label_statistics">Statistics</string>
+
+    <string name="ping_message_mode_unavailable">mode unavailable</string>
 </resources>
