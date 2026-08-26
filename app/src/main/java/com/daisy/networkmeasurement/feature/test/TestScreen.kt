@@ -6,6 +6,7 @@ import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.daisy.networkmeasurement.AppState
 import com.daisy.networkmeasurement.core.config.domain.model.TestMode
+import com.daisy.networkmeasurement.feature.test.speedtest.ui.SpeedTestScreen
 import org.koin.compose.koinInject
 
 @Composable
