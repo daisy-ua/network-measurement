@@ -1,14 +1,48 @@
 <resources>
     <string name="app_name">Network Measurement</string>
 
-    <string name="startup_label_retry">Retry</string>
+    <string name="startup_retry">Retry</string>
 
-    <string name="main_label_test">Test</string>
-    <string name="main_label_statistics">Statistics</string>
+    <string name="main_test">Test</string>
+    <string name="main_statistics">Statistics</string>
 
-    <string name="ping_message_mode_unavailable">mode unavailable</string>
-    <string name="stats_title_empty">No speed tests yet</string>
-    <string name="stats_subtitle_empty">Run your first speed test to see your results here.</string>
+    <string name="ping_mode_unavailable">mode unavailable</string>
+
+    <string name="statistics_empty_title">No speed tests yet</string>
+    <string name="statistics_empty_subtitle">Run your first speed test to see your results here.</string>
     <string name="statistics_title">Statistics</string>
     <string name="statistics_subtitle">Your previous speed tests</string>
+
+    <string name="statistics_date_today">TODAY</string>
+    <string name="statistics_date_yesterday">YESTERDAY</string>
+    <string name="statistics_date_fallback">%1$s %2$d, %3$d</string>
+
+    <string name="speed_average">Average</string>
+    <string name="speed_peak">Peak</string>
+
+    <string name="speed_test_label_start">Start Speed Test</string>
+    <string name="speed_test_stop">Stop</string>
+    <string name="speed_test_start_again">Start Again</string>
+
+    <string name="speed_test_idle_message">Tap the button below to test your speed</string>
+    <string name="speed_test_connecting_title">Connecting…</string>
+    <string name="speed_test_connecting_subtitle">Preparing speed test</string>
+    <string name="speed_test_failed">Speed test failed</string>
+
+    <string name="speed_unit_mbps">Mbps</string>
+
+    <string-array name="month_short_names">
+        <item>JAN</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>APR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AUG</item>
+        <item>SEP</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DEC</item>
+    </string-array>
 </resources>

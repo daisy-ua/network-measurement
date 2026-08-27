@@ -140,14 +140,14 @@ private fun EmptyStatistics(
         verticalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = stringResource(R.string.stats_title_empty),
+            text = stringResource(R.string.statistics_empty_title),
             style = MaterialTheme.typography.titleLarge,
         )
 
         Spacer(Modifier.height(8.dp))
 
         Text(
-            text = stringResource(R.string.stats_subtitle_empty),
+            text = stringResource(R.string.statistics_empty_subtitle),
             modifier = Modifier.widthIn(max = 320.dp),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,

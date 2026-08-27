@@ -5,7 +5,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import com.daisy.networkmeasurement.R
 import com.daisy.networkmeasurement.core.ui.util.formatSpeedValue
 
 
@@ -23,7 +25,7 @@ fun SpeedValue(
         )
 
         Text(
-            text = "Mbps",
+            text = stringResource(R.string.speed_unit_mbps),
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )

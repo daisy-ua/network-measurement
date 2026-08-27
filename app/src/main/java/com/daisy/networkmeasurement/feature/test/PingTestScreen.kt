@@ -16,7 +16,7 @@ fun PingTestScreen(modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = stringResource(R.string.ping_message_mode_unavailable)
+            text = stringResource(R.string.ping_mode_unavailable)
         )
     }
 }

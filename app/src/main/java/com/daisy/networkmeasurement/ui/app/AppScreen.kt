@@ -81,7 +81,7 @@ private fun LoadingScreen(state: ConfigState, onRetry: () -> Unit) {
             ConfigState.Loading -> CircularProgressIndicator()
             ConfigState.Error -> {
                 Button(onClick = onRetry) {
-                    Text(text = stringResource(R.string.startup_label_retry))
+                    Text(text = stringResource(R.string.startup_retry))
                 }
             }
 

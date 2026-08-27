@@ -1,7 +1,7 @@
 package com.daisy.networkmeasurement.di
 
 import com.daisy.networkmeasurement.AppState
-import com.daisy.networkmeasurement.feature.statistics.GetAllMeasurements
+import com.daisy.networkmeasurement.feature.statistics.GetAllMeasurementsUseCase
 import com.daisy.networkmeasurement.feature.statistics.StatisticsViewModel
 import com.daisy.networkmeasurement.feature.test.speedtest.domain.usecase.RunSpeedTestUseCase
 import com.daisy.networkmeasurement.feature.test.speedtest.ui.SpeedTestViewModel
@@ -18,7 +18,7 @@ val appModule = module {
     singleOf(::AppState)
 
     singleOf(::RunSpeedTestUseCase)
-    singleOf(::GetAllMeasurements)
+    singleOf(::GetAllMeasurementsUseCase)
 
     viewModelOf(::SpeedTestViewModel)
     viewModelOf(::StatisticsViewModel)

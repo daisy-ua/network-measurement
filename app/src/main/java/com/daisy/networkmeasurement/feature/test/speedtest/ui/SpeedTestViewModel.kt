@@ -42,7 +42,6 @@ class SpeedTestViewModel(
 
                         is SpeedTestStatus.Running -> {
                             _uiState.value = SpeedTestUiState.Running(
-                                elapsedMillis = state.durationElapsed.inWholeMilliseconds,
                                 currentMbps = state.currentMbps,
                                 peakMbps = state.peakMbps
                             )

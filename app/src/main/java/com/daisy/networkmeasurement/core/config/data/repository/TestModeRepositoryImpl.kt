@@ -1,7 +1,6 @@
 package com.daisy.networkmeasurement.core.config.data.repository
 
 import com.daisy.networkmeasurement.core.config.data.local.TestModeLocalDataSource
-import com.daisy.networkmeasurement.core.config.data.local.toTestMode
 import com.daisy.networkmeasurement.core.config.data.remote.TestModeRemoteDataSource
 import com.daisy.networkmeasurement.core.config.domain.model.TestMode
 import com.daisy.networkmeasurement.core.config.domain.repository.TestModeRepository

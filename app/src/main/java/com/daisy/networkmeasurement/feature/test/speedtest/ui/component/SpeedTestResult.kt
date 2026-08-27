@@ -10,8 +10,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.daisy.networkmeasurement.R
 import com.daisy.networkmeasurement.feature.test.speedtest.ui.SpeedTestUiState
 
 
@@ -22,7 +24,7 @@ fun SpeedTestResult(
     when (state) {
         SpeedTestUiState.Idle -> {
             Text(
-                text = "Tap the button below to test your speed",
+                text = stringResource(R.string.speed_test_idle_message),
                 style = MaterialTheme.typography.titleMedium,
             )
         }
@@ -36,14 +38,14 @@ fun SpeedTestResult(
                 Spacer(Modifier.height(16.dp))
 
                 Text(
-                    text = "Connecting…",
+                    text = stringResource(R.string.speed_test_connecting_title),
                     style = MaterialTheme.typography.titleMedium,
                 )
 
                 Spacer(Modifier.height(4.dp))
 
                 Text(
-                    text = "Preparing speed test",
+                    text = stringResource(R.string.speed_test_connecting_subtitle),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -69,7 +71,7 @@ fun SpeedTestResult(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(
-                    text = "Speed test failed",
+                    text = stringResource(R.string.speed_test_failed),
                     style = MaterialTheme.typography.titleLarge,
                 )
 

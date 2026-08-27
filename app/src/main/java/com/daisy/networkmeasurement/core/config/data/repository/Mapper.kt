@@ -1,4 +1,4 @@
-package com.daisy.networkmeasurement.core.config.data.local
+package com.daisy.networkmeasurement.core.config.data.repository
 
 import com.daisy.networkmeasurement.core.config.domain.model.TestMode
 

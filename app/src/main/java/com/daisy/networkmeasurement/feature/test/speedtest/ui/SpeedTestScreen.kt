@@ -67,15 +67,65 @@ private fun SpeedTestContent(
 }
 
 @Composable
-@Preview(showBackground = true)
-private fun SpeedTestContentPreview() {
+@Preview(name = "Idle State", showBackground = true)
+private fun SpeedTestContentIdlePreview() {
     NetworkMeasurementTheme {
         SpeedTestContent(
-//            state = SpeedTestUiState.Error("pam pam pam"),
-            state = SpeedTestUiState.Completed(50.5, 55.5),
-//            state = SpeedTestUiState.Running(1, 2.0, 3.0),
-//            state = SpeedTestUiState.Connecting,
-//            state = SpeedTestUiState.Idle,
+            state = SpeedTestUiState.Idle,
+            onStart = {},
+            onStop = {}
+        )
+    }
+}
+
+@Composable
+@Preview(name = "Connecting State", showBackground = true)
+private fun SpeedTestContentConnectingPreview() {
+    NetworkMeasurementTheme {
+        SpeedTestContent(
+            state = SpeedTestUiState.Connecting,
+            onStart = {},
+            onStop = {}
+        )
+    }
+}
+
+@Composable
+@Preview(name = "Running State", showBackground = true)
+private fun SpeedTestContentRunningPreview() {
+    NetworkMeasurementTheme {
+        SpeedTestContent(
+            state = SpeedTestUiState.Running(
+                currentMbps = 24.5,
+                peakMbps = 12.0
+            ),
+            onStart = {},
+            onStop = {}
+        )
+    }
+}
+
+@Composable
+@Preview(name = "Completed State", showBackground = true)
+private fun SpeedTestContentCompletedPreview() {
+    NetworkMeasurementTheme {
+        SpeedTestContent(
+            state = SpeedTestUiState.Completed(
+                averageMbps = 50.5,
+                peakMbps = 55.5
+            ),
+            onStart = {},
+            onStop = {}
+        )
+    }
+}
+
+@Composable
+@Preview(name = "Error State", showBackground = true)
+private fun SpeedTestContentErrorPreview() {
+    NetworkMeasurementTheme {
+        SpeedTestContent(
+            state = SpeedTestUiState.Error("pam pam pam"),
             onStart = {},
             onStop = {}
         )

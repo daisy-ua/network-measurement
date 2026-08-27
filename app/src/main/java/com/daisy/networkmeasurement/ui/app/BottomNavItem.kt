@@ -12,12 +12,12 @@ enum class BottomNavItem(
     val route: Any
 ) {
     TEST(
-        titleId = R.string.main_label_test,
+        titleId = R.string.main_test,
         iconId = R.drawable.ic_speed_24,
         route = TestRoute
     ),
     STATISTICS(
-        titleId = R.string.main_label_statistics,
+        titleId = R.string.main_statistics,
         iconId = R.drawable.ic_bar_chart_24,
         route = StatisticsRoute
     )

@@ -7,7 +7,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.daisy.networkmeasurement.R
 import com.daisy.networkmeasurement.feature.test.speedtest.ui.SpeedTestUiState
 
 
@@ -41,13 +43,13 @@ fun SpeedTestButton(
     ) {
         Text(
             text = when (state) {
-                SpeedTestUiState.Idle -> "Start Speed Test"
+                SpeedTestUiState.Idle -> stringResource(R.string.speed_test_label_start)
 
                 is SpeedTestUiState.Connecting,
-                is SpeedTestUiState.Running -> "Stop"
+                is SpeedTestUiState.Running -> stringResource(R.string.speed_test_stop)
 
                 is SpeedTestUiState.Completed,
-                is SpeedTestUiState.Error -> "Start Again"
+                is SpeedTestUiState.Error -> stringResource(R.string.speed_test_start_again)
             },
         )
     }

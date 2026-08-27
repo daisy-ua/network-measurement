@@ -8,10 +8,10 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
 class StatisticsViewModel(
-    getAllMeasurements: GetAllMeasurements
+    getAllMeasurementsUseCase: GetAllMeasurementsUseCase
 ) : ViewModel() {
     val uiState: StateFlow<StatisticsUiState> =
-        getAllMeasurements()
+        getAllMeasurementsUseCase()
             .map { measurements ->
                 StatisticsUiState(
                     measurements = measurements,
