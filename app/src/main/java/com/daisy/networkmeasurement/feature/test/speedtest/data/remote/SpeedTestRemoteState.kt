@@ -3,6 +3,8 @@ package com.daisy.networkmeasurement.feature.test.speedtest.data.remote
 import kotlin.time.Duration
 
 sealed interface SpeedTestRemoteState {
+    data object Connecting : SpeedTestRemoteState
+
     data class Running(
         val currentMbps: Double,
         val peakMbps: Double,

@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.daisy.networkmeasurement.core.ui.util.formatSpeed
 import com.daisy.networkmeasurement.feature.test.speedtest.domain.model.SpeedTestResult
 
 
@@ -58,12 +59,4 @@ private fun SpeedMetric(
             fontWeight = FontWeight.SemiBold,
         )
     }
-}
-
-
-private fun formatSpeed(
-    mbps: Double,
-): String = when {
-    mbps >= 100 -> "%.0f Mbps".format(mbps)
-    else -> "%.1f Mbps".format(mbps)
 }

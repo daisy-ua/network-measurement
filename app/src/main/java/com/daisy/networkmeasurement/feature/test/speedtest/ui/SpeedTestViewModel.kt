@@ -25,6 +25,10 @@ class SpeedTestViewModel(
             runSpeedTestUseCase()
                 .collect { state ->
                     when (state) {
+                        SpeedTestStatus.Connecting -> {
+                            _uiState.value = SpeedTestUiState.Connecting
+                        }
+
                         is SpeedTestStatus.Completed -> {
                             _uiState.value = SpeedTestUiState.Completed(
                                 averageMbps = state.averageMbps,
@@ -51,5 +55,6 @@ class SpeedTestViewModel(
     fun stop() {
         testJob?.cancel()
         testJob = null
+        _uiState.value = SpeedTestUiState.Idle
     }
 }

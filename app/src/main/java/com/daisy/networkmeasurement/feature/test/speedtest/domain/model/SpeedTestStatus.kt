@@ -4,6 +4,8 @@ import kotlin.time.Clock
 import kotlin.time.Duration
 
 sealed interface SpeedTestStatus {
+    data object Connecting : SpeedTestStatus
+
     data class Running(
         val currentMbps: Double,
         val peakMbps: Double,

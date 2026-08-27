@@ -4,6 +4,8 @@ sealed interface SpeedTestUiState {
 
     data object Idle : SpeedTestUiState
 
+    data object Connecting : SpeedTestUiState
+
     data class Running(
         val elapsedMillis: Long,
         val currentMbps: Double,

@@ -7,7 +7,10 @@ import com.daisy.networkmeasurement.feature.test.speedtest.domain.model.SpeedTes
 
 fun SpeedTestRemoteState.toDomainStatus(): SpeedTestStatus {
     return when (this) {
+        SpeedTestRemoteState.Connecting -> SpeedTestStatus.Connecting
+
         is SpeedTestRemoteState.Completed -> SpeedTestStatus.Completed(averageMbps, peakMbps)
+
         is SpeedTestRemoteState.Running -> SpeedTestStatus.Running(
             currentMbps = currentMbps,
             peakMbps = peakMbps,

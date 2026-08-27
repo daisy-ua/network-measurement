@@ -6,6 +6,7 @@ import com.daisy.networkmeasurement.feature.test.speedtest.domain.repository.Spe
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onEach
+import kotlin.coroutines.cancellation.CancellationException
 
 class RunSpeedTestUseCase(
     private val repository: SpeedTestRepository
@@ -17,8 +18,10 @@ class RunSpeedTestUseCase(
                     repository.saveSpeedTestResult(status.toResult())
                 }
             }
-            .catch { _ ->
-                emit(SpeedTestStatus.Failed(cause = "Unknown error"))
+            .catch { throwable ->
+                if (throwable is CancellationException) throw throwable
+
+                emit(SpeedTestStatus.Failed(cause = throwable.message ?: "Unknown error"))
             }
     }
 }
