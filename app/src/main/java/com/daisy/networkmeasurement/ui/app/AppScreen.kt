@@ -46,6 +46,9 @@ fun AppContent(
         ?.destination
 
     Scaffold(
+        topBar = {
+            AppTopBar(destination = currentDestination)
+        },
         bottomBar = {
             AppBottomBar(
                 currentDestination = currentDestination,

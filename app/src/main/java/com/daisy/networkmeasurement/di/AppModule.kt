@@ -1,6 +1,8 @@
 package com.daisy.networkmeasurement.di
 
 import com.daisy.networkmeasurement.AppState
+import com.daisy.networkmeasurement.feature.statistics.GetAllMeasurements
+import com.daisy.networkmeasurement.feature.statistics.StatisticsViewModel
 import com.daisy.networkmeasurement.feature.test.speedtest.domain.usecase.RunSpeedTestUseCase
 import com.daisy.networkmeasurement.feature.test.speedtest.ui.SpeedTestViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -16,6 +18,8 @@ val appModule = module {
     singleOf(::AppState)
 
     singleOf(::RunSpeedTestUseCase)
+    singleOf(::GetAllMeasurements)
 
     viewModelOf(::SpeedTestViewModel)
+    viewModelOf(::StatisticsViewModel)
 }
